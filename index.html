@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web hola mundo</title>
+    <style>
+        body {
+            height: 100vh;
+            background: linear-gradient(rgb(206, 5, 206), rgb(58, 0, 58));
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        header {
+            color: white;
+        }
+
+        main p {
+            color: white;
+            font-size: xx-large;
+        }
+
+        main div{
+            padding: 50px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>WEB --HOLA MUNDO--</h1>
+    </header>
+    <main>
+        <div id="respuesta"></div>
+        <input id="entrada-valor" type="text" placeholder="TU NOMBRE??">
+        <button id="btn">Enviar</button>
+    </main>
+    <script>
+        document.addEventListener('click', (e) => {
+            if (e.target.matches('#btn')) {
+                const valor = document.getElementById('entrada-valor').value;
+                document.getElementById('respuesta').innerHTML = `<p>Hola ${valor}!! Gracias por visitar esta web!</p>`
+
+            }
+        })
+
+    </script>
+</body>
+
+</html>
